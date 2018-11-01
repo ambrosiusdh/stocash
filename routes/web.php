@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'asd';
 });
+
+Route::get('/cashier/login', 'CashierController@getLogin');
+
+Route::get('/cashier', 'CashierController@getIndex');

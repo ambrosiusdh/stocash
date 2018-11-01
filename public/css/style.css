@@ -1,0 +1,272 @@
+@font-face {
+    src: url("../fonts/Qubo-Regular.ttf");
+    font-family: "Qubo";
+}
+
+@font-face {
+    src: url("../fonts/Qubo-Light.ttf");
+    font-family: "Qubo-Light";
+}
+
+@font-face {
+    src: url("../fonts/Qubo-ExtraLight.ttf");
+    font-family: "Qubo-ExtraLight";
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.overlay{
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+body{
+    max-height: 100vh;
+    overflow: hidden;
+    font-family: "Qubo";
+}
+
+.cashier-login{
+    background-color: #cb202d;
+    height: 100vh;
+    font-family: "Qubo";
+    padding-top: 27vh;
+    color: white;
+    text-align: center;
+}
+
+.cashier-login-header h2{
+    font-size: 72px;
+    letter-spacing: 3px;
+    margin-bottom: 1px;
+}
+
+.cashier-login-header p{
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #EEEEEE;
+    font-family: "Qubo-ExtraLight";
+}
+
+.cashier-login-form input{
+    width: 18%;
+    padding: 8px 30px;
+    border-radius: 20px;
+    border: none;
+}
+
+.cashier-login-form input[placeholder]{
+    font-size: 12px;
+}
+
+.cashier-login-form .btn{
+    width: 10%;
+    background-color: white;
+    letter-spacing: 1px;
+    color: #cb202d;
+    font-weight: bold;
+}
+
+.cashier-login-form p{
+    font-family: "Qubo-ExtraLight";
+    color: #f1f1f1;
+}
+
+.cashier-login-form p span{
+    font-family: "Qubo";
+    font-weight: bold;
+}
+
+.navbar{
+    background-color: #cb202d;
+    padding: 0 16px;
+}
+
+.navbar-light .navbar-brand{
+    color: white;
+    font-size: 42px;
+    padding: 0;
+    font-family: "Qubo-Light";
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: white;
+    font-size: 22px;
+    font-family: "Qubo-ExtraLight";
+}
+
+.cashier{
+    padding-top: 10vh;
+    padding-left: 30px;
+    padding-right: 30px;
+    max-height: 70vh;
+}
+
+.cashier::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.cashier-item{
+    float: left;
+}
+
+.cashier-item-list{
+    width: 35%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    box-shadow: 4px 4px 2px rgba(0,0,0,0.2);
+    height: 77vh;
+}
+
+.cashier-item-list-table{
+    height: 67vh;
+    overflow-y: auto;
+}
+
+.cashier-item-total td{
+    padding-top: 40px;
+}
+
+.cashier-item-list-button{
+    padding: 10px;
+    padding-right: 18px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.cashier-item-list-button button{
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 175px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.cashier-btn-success{
+    background-color: #55bc1c;
+    margin-right: 10px;
+}
+
+.cashier-btn-success:hover{
+    background-color: #47911a;
+}
+
+.cashier-btn-fail{
+    background-color: #cb202d;
+    margin-left: 10px;
+}
+
+.cashier-btn-fail:hover{
+    background-color: #931921;
+}
+
+.cashier-table-header{
+    border-bottom: solid 1px black;
+}
+
+.cashier .fa-times-circle{
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.cashier .fa-times-circle:hover{
+    color: #D2000C;
+}
+
+.cashier-list-product{
+    margin-left: 2%;
+    width: 63%;
+}
+
+.cashier-product-grid{
+    max-height: 63vh;
+    overflow-y: auto;
+}
+
+.cashier-product-grid .col-lg-4{
+    padding: 5px;
+}
+
+.cashier-product-grid .col-lg-4 div{
+    height: 125px;
+    background-color: lightgray;
+    border-radius: 15px;
+    text-align: center;
+    padding: 35px 15px 0;
+    cursor: pointer;
+}
+
+.cashier-product-grid .col-lg-4 .price-tag{
+    margin-top: -15px;
+    font-weight: bold;
+}
+
+.notice{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 400px;
+    width: 50%;
+    border-radius: 10px;
+    background-color: white;
+    color: white;
+    font-size: 20px;
+}
+
+.notice-header{
+    width: 100%;
+    height: 70px;
+    font-size: 24px;
+    padding: 15px 30px;
+    background-color: #cb202d;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.notice-content{
+    width: 90%;
+    margin: auto;
+    color: black;
+    font-size: 34px;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.notice-content p:nth-of-type(2){
+    font-size: 20px;
+
+}
+
+.notice-content button{
+    width: 200px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.notice-content table{
+    font-size: 24px;
+    font-weight: bold;
+}
