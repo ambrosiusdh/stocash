@@ -13,6 +13,9 @@
                 <li class="nav-item">
                     <a href="" class="nav-link">Hi, Cashier 1</a>
                 </li>
+                <li class="nav-item nav-burger">
+                    <i class="fas fa-bars"></i>
+                </li>
             </ul>
         </div>
     </div>

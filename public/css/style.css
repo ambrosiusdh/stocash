@@ -43,6 +43,105 @@ body{
     font-family: "Qubo";
 }
 
+.dashboard{
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 30%;
+    background-color: #cb202d;
+    color: white;
+    padding: 3% 20px;
+    z-index: 1001;
+}
+
+.dashboard-exit button{
+    position: absolute;
+    top: 0.5%;
+    right: 3%;
+    font-size: 36px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: white;
+    transition: 0.2s;
+}
+
+.dashboard-exit button:hover{
+    color: #EEEEEE;
+}
+
+.dashboard-header{
+    font-size: 28px;
+    font-family: "Qubo-ExtraLight";
+
+}
+
+.dashboard-header .fa-user-circle{
+    font-size: 108px;
+    vertical-align: middle;
+}
+
+.dashboard-header span{
+    margin-left: 20px;
+}
+
+.dashboard-content{
+    margin-top: 30px;
+    margin-left: -10px;
+}
+
+.dashboard-content table{
+    font-family: "Qubo-ExtraLight";
+}
+
+.dashboard-content table i{
+    font-size: 32px;
+    color: white;
+}
+
+.dashboard-content table a{
+    color: white;
+    text-decoration: none;
+    transition: 0.1s;
+}
+
+.dashboard-content table a:hover{
+    color: lightgrey;
+}
+
+.dashboard-content table a span{
+    margin-left: 3%;
+}
+
+.dashboard-content table tr td:nth-of-type(1){
+    width: 15%;
+}
+
+.dashboard-content table tr td:nth-of-type(2){
+    padding-top: 2.3vh;
+}
+
+.dashboard-footer{
+    position: absolute;
+    bottom: 0;
+}
+
+.nav-burger{
+    font-size: 29px;
+    padding-left: 20px;
+}
+
+.nav-burger .fa-bars{
+    vertical-align: middle;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-burger .fa-bars:hover{
+    color: lightgrey;
+}
+
 .cashier-login{
     background-color: #cb202d;
     height: 100vh;
@@ -269,4 +368,425 @@ body{
 .notice-content table{
     font-size: 24px;
     font-weight: bold;
+}
+
+.owner{
+    width: 95%;
+    margin: auto;
+}
+
+.owner::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.owner-header{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.owner-item{
+    float: left;
+}
+
+.owner-item-statistic{
+    width: 65%;
+}
+
+.owner-item-statistic div{
+    background-color: #ECECEC;
+}
+
+.owner-statistic-detail{
+    padding: 20px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.owner-statistic-detail ul{
+    list-style-type: none;
+    overflow:hidden;
+    padding: 0;
+    margin: 0;
+}
+
+.owner-statistic-detail ul li{
+    float: right;
+    margin: 0 20px;
+    font-size: 22px;
+}
+
+.owner-statistic-detail ul li:nth-of-type(1){
+    float: left;
+    margin: 0;
+}
+
+.owner-statistic-detail a{
+    color: #cb202d;
+}
+
+.owner-statistic-detail .col-lg-4{
+    text-align: center;
+}
+
+.owner-statistic-detail-head{
+    color: #cb202d;
+    font-size: 24px;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.owner-statistic-detail .col-lg-4 h3{
+    font-size: 72px;
+    margin-bottom: -10px;
+}
+
+#line-chart{
+    min-height: 300px;
+}
+
+#line-chart text{
+    fill: black;
+}
+
+.owner-product-type{
+    width: 30%;
+    margin-left: 5%;
+}
+
+.owner-product-type-item{
+    background-color: #ECECEC;
+    position: relative;
+    padding: 10px;
+    border-radius: 5px;
+    min-height: 130px;
+    margin-bottom: 10px;
+}
+
+.owner-product-type-item::after{
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.owner-product-type-item div{
+    float: left;
+}
+
+.owner-product-type-item .table td{
+    padding: 3px 15px;
+    font-size: 20px;
+}
+
+.owner-product-type-item .table td:nth-of-type(1){
+    color: #2E99FF;
+    font-weight: bold;
+}
+
+.owner-product-type-item div .fa-square-full{
+    font-size: 64px;
+}
+
+.owner-product-type-footer{
+    background-color: lightgrey;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 5px 15px;
+    font-size: 24px;
+    width: 100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.owner-product-type-footer i{
+    float: right;
+    font-size: 36px;
+}
+
+.report{
+    width: 95%;
+    margin: auto;
+}
+
+.report-header{
+    margin-top: 15px;
+    position: relative;
+}
+
+.report-header-date{
+    position: absolute;
+    right: 0;
+    top: 9px;
+    background-color: #cb202d;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.report-header-date:hover{
+    background-color: #9c1a23;
+}
+
+.report-header-date i{
+    float: right;
+    font-size: 20px;
+    padding-top: 2px;
+    padding-left: 70px;
+}
+
+.report-content{
+    max-height: 68vh;
+    width: 100%;
+    border: solid black 1px;
+    overflow-y: auto;
+}
+
+.report-content table thead tr, .report-content-total table tr{
+    background-color: lightgrey;
+}
+
+.report-content table tbody tr td:nth-of-type(1){
+    width: 10%;
+}
+
+.report-content table tbody tr td:nth-of-type(2){
+    width: 50%;
+}
+
+.report-content table tbody tr td:nth-of-type(3){
+    width: 10%;
+}
+
+.report-content table tbody tr td:nth-of-type(4){
+    width: 15%;
+}
+
+.report-content table tbody tr td:nth-of-type(5){
+    width: 15%;
+}
+
+.report-content-total{
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.report-content-total table tr td:nth-of-type(1){
+    width: 70%;
+}
+
+.report-content-total table tr td:nth-of-type(2){
+    width: 15%;
+    padding-left: 6px;
+}
+
+.report-content-total table tr td:nth-of-type(3){
+    width: 15%;
+    padding-left: 4px;
+}
+
+.inventory{
+    width: 95%;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.inventory-header{
+    margin-bottom: 20px;
+}
+
+.inventory-header-action::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.inventory-header-button{
+    float: right;
+    border-radius: 5px;
+    padding: 5px 20px;
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+    border: none;
+}
+
+.inventory-header-button:nth-of-type(1){
+    background-color: #55bc1c;
+}
+
+.inventory-header-button:nth-of-type(1):hover{
+    background-color: #418c16;
+}
+
+.inventory-header-button:nth-of-type(2){
+    background-color: #cb202d;
+}
+
+.inventory-header-button:nth-of-type(2):hover{
+    background-color: #9e1b2e;
+}
+
+.inventory-edit-button{
+    background-color: #6eb1e1;
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.inventory-edit-button:hover{
+    background-color: #5988b1;
+}
+
+.inventory-content .report-content{
+    max-height: 67vh;
+    overflow-y: auto;
+}
+
+.notice-edit-stock{
+    margin-top: 5vh;
+}
+
+.notice-content .inventory-stock-plus, .notice-content .inventory-stock-minus{
+    border: none;
+    background-color: transparent;
+    width: 60%;
+    padding: 0;
+    cursor: pointer;
+}
+
+.notice-content .inventory-stock-plus:hover, .notice-content .inventory-stock-minus:hover{
+    color: grey;
+}
+
+#update-stock-value{
+    width: 100%;
+    border: solid 0.5px black;
+    text-align: center;
+}
+
+.transaction{
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.transaction-header{
+    font-size: 30px;
+}
+
+.transaction-header ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.transaction-header ul li:nth-of-type(1){
+    float: left;
+    padding-top: 5px;
+}
+
+.transaction-header ul li:nth-of-type(2){
+    float: right;
+    font-size: 36px;
+}
+
+.transaction-header::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.transaction-content{
+    height: 75vh;
+    overflow: hidden;
+    border: solid black 1px;
+}
+
+.transaction-content::after{
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.transaction-content-item{
+    float: left;
+}
+
+.transaction-content-list{
+    width: 35%;
+    height: inherit;
+    overflow-y: auto;
+}
+
+.transaction-list-header{
+    background-color: lightgrey;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.transaction-list-item{
+    padding: 10px 20px;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.transaction-list-item:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+
+.transaction-list-item::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.transaction-list-item div{
+    float: left;
+}
+
+.transaction-list-item div p{
+    margin: 5px;
+    font-family: "Qubo-ExtraLight";
+    font-weight: bold;
+}
+
+.transaction-list-item div i{
+    font-weight: normal;
+}
+
+.transaction-list-item div:nth-of-type(2){
+    float: right;
+    padding-top: 20px;
+    font-weight: bold;
+}
+
+.transaction-list-item div:nth-of-type(2) span{
+    font-size: 28px;
+    margin-left: 20px;
+}
+
+.transaction-content-detail{
+    width: 65%;
+    height: inherit;
+    border-left: solid black 1px;
+}
+
+.transaction-receipt-empty{
+    text-align: center;
+    padding-top: 16vh;
+    font-size: 24px;
+}
+
+.transaction-receipt-empty i{
+    font-size: 128px;
+    color: gray;
 }

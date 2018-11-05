@@ -2,6 +2,7 @@
 
 @section('header')
     @include('partials.header')
+    @include('partials.dashboard')
 @endsection
 
 @section('contents')

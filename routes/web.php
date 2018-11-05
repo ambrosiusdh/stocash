@@ -18,3 +18,13 @@ Route::get('/', function () {
 Route::get('/cashier/login', 'CashierController@getLogin');
 
 Route::get('/cashier', 'CashierController@getIndex');
+
+Route::get('/owner/login', 'OwnerController@getLogin');
+
+Route::get('/owner', 'OwnerController@getIndex');
+
+Route::get('/owner/report', 'OwnerController@getReport');
+
+Route::get('/owner/inventory', 'OwnerController@getInventory');
+
+Route::get('/owner/transaction', 'OwnerController@getTransaction');
