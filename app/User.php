@@ -29,6 +29,10 @@ class User extends Authenticatable
     ];
 
     public function userRole(){
-        return $this->hasOne('\App\UserRole');
+        return $this->hasOne('\App\UserRole', 'userRoleId');
+    }
+
+    public function transactionHeader(){
+        return $this->hasMany('\App\Transaction', 'id','id');
     }
 }

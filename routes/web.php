@@ -11,20 +11,31 @@
 |
 */
 
-Route::get('/', function () {
-    return 'asd';
+
+use Illuminate\Http\Request;
+
+Route::get('/', 'UserController@checkSession');
+
+Route::get('/cashier', 'ItemController@getCashier');
+
+Route::get('/login', 'UserController@getLogin');
+
+Route::get('/report', 'UserController@getReport');
+
+Route::get('/inventory', 'ItemController@getInventory');
+
+Route::get('/transaction', 'TransactionController@getTransaction');
+
+Route::post('/login', 'UserController@login');
+
+Route::post('/inventory', 'ItemController@editStock');
+
+Route::get('/test', 'TransactionController@getTransactionDetail');
+
+Route::get('/asd', function (Request $request){
+    return $request->session()->all();
 });
 
-Route::get('/cashier/login', 'CashierController@getLogin');
-
-Route::get('/cashier', 'CashierController@getIndex');
-
-Route::get('/owner/login', 'OwnerController@getLogin');
-
-Route::get('/owner', 'OwnerController@getIndex');
-
-Route::get('/owner/report', 'OwnerController@getReport');
-
-Route::get('/owner/inventory', 'OwnerController@getInventory');
-
-Route::get('/owner/transaction', 'OwnerController@getTransaction');
+Route::get('/dsa', function (Request $request){
+    return $request->session()->flush();
+});

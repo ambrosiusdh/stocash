@@ -14,23 +14,23 @@
         <table class="table table-borderless">
             <tr>
                 <td><i class="fas fa-home"></i></td>
-                <td><a href="/owner"><span>Home</span></a></td>
+                <td><a href="{{url('/')}}"><span>Home</span></a></td>
             </tr>
             <tr>
                 <td><i class="fas fa-chart-line"></i></td>
-                <td><a href="/owner/report"><span>Report</span></a></td>
+                <td><a href="{{url('/report')}}"><span>Report</span></a></td>
             </tr>
             <tr>
                 <td><i class="fas fa-briefcase"></i></td>
-                <td><a href="/owner/inventory"><span>Inventory</span></a></td>
+                <td><a href="{{url('/inventory')}}"><span>Inventory</span></a></td>
             </tr>
             <tr>
                 <td><i class="fas fa-coins"></i></td>
-                <td><a href="/owner/transaction"><span>Transaction</span></a></td>
+                <td><a href="{{url('/transaction')}}"><span>Transaction</span></a></td>
             </tr>
             <tr>
                 <td><i class="fas fa-receipt"></i></td>
-                <td><a href="/cashier"><span>Cashier</span></a></td>
+                <td><a href="{{url('/cashier')}}"><span>Cashier</span></a></td>
             </tr>
         </table>
     </div>

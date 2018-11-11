@@ -125,9 +125,12 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'email' => [
+            'required' => 'Bagian email masih kosong'
         ],
+        'password' => [
+            'required' => 'Bagian password masih kosong'
+        ]
     ],
 
     /*

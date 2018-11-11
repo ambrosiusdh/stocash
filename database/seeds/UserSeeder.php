@@ -16,7 +16,7 @@ class UserSeeder extends Seeder
         $faker = Faker\Factory::create();
 
         DB::table('users')->delete();
-        for ($i = 0; $i < 15; $i++) {
+        for ($i = 0; $i < 20; $i++) {
             $user = new User();
             $user->name = $faker->name;
             $user->email = $faker->email;

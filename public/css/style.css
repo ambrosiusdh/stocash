@@ -775,6 +775,7 @@ body{
 }
 
 .transaction-content-detail{
+    position: relative;
     width: 65%;
     height: inherit;
     border-left: solid black 1px;
@@ -789,4 +790,52 @@ body{
 .transaction-receipt-empty i{
     font-size: 128px;
     color: gray;
+}
+
+.transaction-receipt-detail{
+    height: inherit;
+}
+
+.transaction-receipt-detail-header{
+    background-color: lightgrey;
+}
+
+.transaction-receipt-detail-content{
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.transaction-loading-screen{
+    width: 100%;
+    height: inherit;
+    position: absolute;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.transaction-loading-screen div{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    z-index: 200;
+}
+
+.transaction-loading-screen div div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height:inherit;
+    border: 10px solid white;
+    border-left-color: black;
+    border-radius: 100%;
+    animation: loading-transaction infinite 2s linear;
+}
+
+@keyframes loading-transaction {
+    0% {transform: rotate(0deg)}
+    100% {transform: rotate(360deg)}
 }
