@@ -12,15 +12,16 @@
 */
 
 
+use App\Http\Controllers\TransactionController;
 use Illuminate\Http\Request;
 
-Route::get('/', 'UserController@checkSession');
+Route::get('/', 'UserController@getIndex');
 
 Route::get('/cashier', 'ItemController@getCashier');
 
 Route::get('/login', 'UserController@getLogin');
 
-Route::get('/report', 'UserController@getReport');
+Route::get('/report', 'ItemController@getReport');
 
 Route::get('/inventory', 'ItemController@getInventory');
 
@@ -30,10 +31,21 @@ Route::post('/login', 'UserController@login');
 
 Route::post('/inventory', 'ItemController@editStock');
 
-Route::get('/test', 'TransactionController@getTransactionDetail');
+Route::get('/get-transaction-detail', 'TransactionController@getTransactionDetail');
 
-Route::get('/asd', function (Request $request){
-    return $request->session()->all();
+Route::get('/insert-transaction', 'TransactionController@insertTransactionData');
+
+Route::get('/insert-shipped-item', 'ItemController@insertShippedItemData');
+
+Route::get('/logout', 'UserController@logout');
+
+Route::get('/asd', function (){
+    if(session()->get('id')){
+        return session()->all();
+    }else{
+        return "dsa";
+    }
+
 });
 
 Route::get('/dsa', function (Request $request){

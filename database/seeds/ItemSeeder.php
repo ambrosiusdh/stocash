@@ -21,7 +21,7 @@ class ItemSeeder extends Seeder
             $item->itemTypeId= "1";
             $item->itemName= $fakerFood->foodName();
             $item->stock = $faker->numberBetween(1,100);
-            $item->price = $faker->randomNumber(2);
+            $item->price = $faker->randomNumber(5);
             $item->save();
 
             $item = new Item();

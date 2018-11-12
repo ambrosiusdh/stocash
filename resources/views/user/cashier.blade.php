@@ -1,5 +1,9 @@
 @extends('layout.master')
 
+@section('title')
+    STOCASH - Cashier
+@endsection
+
 @section('header')
     @include('partials.header')
     @include('partials.dashboard')
@@ -19,12 +23,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td class="col-md-6">Beras Rojolele 5kg</td>
-                            <td class="col-md-2">1</td>
-                            <td class="col-md-3 product-price">67000</td>
-                            <td class="col-md-1"><i class="far fa-times-circle"></i></td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -41,10 +39,10 @@
                 @foreach($item->chunk(3) as $itemChunk)
                 <div class="row">
                     @foreach($itemChunk as $data)
-                    <div class="col-lg-4">
+                    <div class="col-lg-4" id="cashier-item-{{$data->id}}">
                         <div>
-                            <p>{{$data->itemName}}</p>
-                            <p class="price-tag">{{$data->price}}$</p>
+                            <p class="name-tag">{{$data->itemName}}</p>
+                            <p class="price-tag">Rp. {{$data->price}}</p>
                         </div>
                     </div>
                     @endforeach

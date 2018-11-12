@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\User;
-use function compact;
 use Illuminate\Http\Request;
 use function redirect;
+use function session;
 use function view;
 
 class UserController extends Controller
@@ -15,37 +15,46 @@ class UserController extends Controller
     }
 
     public function getIndex(){
-        return view('user.index');
-    }
-
-    public function getReport(){
-        return view('user.report');
-    }
-
-    public function getTransaction(){
-        return view('user.transaction');
-    }
-
-    public function checkSession(Request $request){
-        if (!$request->session()->has('email')) {
-            return redirect('/login');
+        if (session()->get('id') == 1) {
+            return view('user.index');
         }else{
-            return $this->getIndex();
+            if(session()->has('id')){
+                return redirect('/cashier');
+            }
+            return redirect('/login');
         }
+
     }
 
     public function login(Request $request){
+        if(!$request->has('data')){
+            redirect()->back();
+        }
         $request->validate([
             'email' => 'required',
             'password' => 'required'
         ]);
 
         $user = User::where('email', $request->email)->first();
-        if($user == null){
+        if($user == null || $user->password != $request->password){
             return redirect()->back()->with('error', 'Email atau password salah');
         }
 
-        $request->session()->put(['email' => $request->email]);
-        $this->checkSession($request);
+        $request->session()->put(['id' => $user->id]);
+        $request->session()->put(['name' => $user->name]);
+        if($user->roleId == 1) {
+            return redirect('/');
+        }else{
+            return redirect('/cashier');
+        }
+    }
+
+    public function logout(Request $request){
+        if(!$request->has('data')){
+            redirect()->back();
+        }
+
+        session()->flush();
+        return redirect('/login');
     }
 }

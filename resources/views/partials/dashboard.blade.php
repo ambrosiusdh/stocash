@@ -1,3 +1,4 @@
+@if(session()->get('id') == 1)
 <div class="overlay" style="display: none;">
 
 </div>
@@ -41,9 +42,10 @@
                 <td><a href=""><span>Account</span></a></td>
             </tr>
             <tr>
-                <td><i class="fas fa-cog"></i></td>
-                <td><a href=""><span>Setting</span></a></td>
+                <td><i class="fas fa-sign-out-alt"></i></td>
+                <td><a href="{{url('/logout')}}"><span>Logout</span></a></td>
             </tr>
         </table>
     </div>
 </div>
+@endif

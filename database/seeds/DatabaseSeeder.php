@@ -18,8 +18,8 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
         $this->call(ItemSeeder::class);
         $this->call(ItemTypeSeeder::class);
-        $this->call(ShippedItemSeeder::class);
-        $this->call(TransactionSeeder::class);
-        $this->call(TransactionHeaderSeeder::class);
+        //$this->call(ShippedItemSeeder::class);
+        //$this->call(TransactionSeeder::class);
+        //$this->call(TransactionHeaderSeeder::class);
     }
 }

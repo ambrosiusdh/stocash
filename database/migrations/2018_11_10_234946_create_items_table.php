@@ -19,6 +19,7 @@ class CreateItemsTable extends Migration
             $table->string('itemName');
             $table->integer('stock');
             $table->integer('price');
+            $table->integer('goodsSold')->default(0);
             $table->timestamps();
         });
     }

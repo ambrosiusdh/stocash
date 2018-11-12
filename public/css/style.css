@@ -839,3 +839,12 @@ body{
     0% {transform: rotate(0deg)}
     100% {transform: rotate(360deg)}
 }
+
+.logout-cashier{
+    color: white;
+    transition: 0.2s;
+}
+
+.logout-cashier:hover{
+    color: lightgrey;
+}

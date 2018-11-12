@@ -1,5 +1,9 @@
 @extends('layout.master')
 
+@section('title')
+    STOCASH - Report
+@endsection
+
 @section('header')
     @include('partials.header')
     @include('partials.dashboard')
@@ -24,83 +28,15 @@
                     </tr>
                 </thead>
                 <tbody>
+                    @foreach($items as $item)
                     <tr>
                         <td><i class="fas fa-square-full"></i></td>
-                        <td>Air Mineral 600mL</td>
-                        <td>13</td>
+                        <td>{{$item->itemName}}</td>
+                        <td>{{$item->goodsSold}}</td>
                         <td>Rp</td>
-                        <td>39000</td>
+                        <td>{{$item->price}}</td>
                     </tr>
-                    <tr>
-                        <td><i class="fas fa-square-full"></i></td>
-                        <td>Air Mineral 600mL</td>
-                        <td>13</td>
-                        <td>Rp</td>
-                        <td>39000</td>
-                    </tr>
-                    <tr>
-                        <td><i class="fas fa-square-full"></i></td>
-                        <td>Air Mineral 600mL</td>
-                        <td>13</td>
-                        <td>Rp</td>
-                        <td>39000</td>
-                    </tr>
-                    <tr>
-                        <td><i class="fas fa-square-full"></i></td>
-                        <td>Air Mineral 600mL</td>
-                        <td>13</td>
-                        <td>Rp</td>
-                        <td>39000</td>
-                    </tr>
-                    <tr>
-                        <td><i class="fas fa-square-full"></i></td>
-                        <td>Air Mineral 600mL</td>
-                        <td>13</td>
-                        <td>Rp</td>
-                        <td>39000</td>
-                    </tr>
-                    <tr>
-                        <td><i class="fas fa-square-full"></i></td>
-                        <td>Air Mineral 600mL</td>
-                        <td>13</td>
-                        <td>Rp</td>
-                        <td>39000</td>
-                    </tr>
-                    <tr>
-                        <td><i class="fas fa-square-full"></i></td>
-                        <td>Air Mineral 600mL</td>
-                        <td>13</td>
-                        <td>Rp</td>
-                        <td>39000</td>
-                    </tr>
-                    <tr>
-                        <td><i class="fas fa-square-full"></i></td>
-                        <td>Air Mineral 600mL</td>
-                        <td>13</td>
-                        <td>Rp</td>
-                        <td>39000</td>
-                    </tr>
-                    <tr>
-                        <td><i class="fas fa-square-full"></i></td>
-                        <td>Air Mineral 600mL</td>
-                        <td>13</td>
-                        <td>Rp</td>
-                        <td>39000</td>
-                    </tr>
-                    <tr>
-                        <td><i class="fas fa-square-full"></i></td>
-                        <td>Air Mineral 600mL</td>
-                        <td>13</td>
-                        <td>Rp</td>
-                        <td>39000</td>
-                    </tr>
-                    <tr>
-                        <td><i class="fas fa-square-full"></i></td>
-                        <td>Air Mineral 600mL</td>
-                        <td>13</td>
-                        <td>Rp</td>
-                        <td>39000</td>
-                    </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

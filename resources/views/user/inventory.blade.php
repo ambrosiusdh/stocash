@@ -1,5 +1,9 @@
 @extends('layout.master')
 
+@section('title')
+    STOCASH - Inventory
+@endsection
+
 @section('header')
     @include('partials.header')
     @include('partials.dashboard')

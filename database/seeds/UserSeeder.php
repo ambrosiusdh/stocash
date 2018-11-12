@@ -14,14 +14,19 @@ class UserSeeder extends Seeder
     public function run()
     {
         $faker = Faker\Factory::create();
-
         DB::table('users')->delete();
-        for ($i = 0; $i < 20; $i++) {
+        $user = new User();
+        $user->name = $faker->name;
+        $user->email = $faker->email;
+        $user->password = $faker->password;
+        $user->roleId = 1;
+        $user->save();
+        for ($i = 0; $i < 5; $i++) {
             $user = new User();
             $user->name = $faker->name;
             $user->email = $faker->email;
             $user->password = $faker->password;
-            $user->roleId = $faker->numberBetween(1,2);
+            $user->roleId = 2;
             $user->save();
         }
 

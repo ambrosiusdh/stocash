@@ -1,5 +1,9 @@
 @extends('layout.master')
 
+@section('title')
+    STOCASH - Login
+@endsection
+
 @section('contents')
     <div class="cashier-login">
         <div class="cashier-login-header">
@@ -32,7 +36,7 @@
             </div>
             @endif
             @if(session('error'))
-                <div style="font-weight: bold;">
+                <div style="font-weight: bold; color: yellow;">
                     <p>{{session('error')}}</p>
                 </div>
             @endif

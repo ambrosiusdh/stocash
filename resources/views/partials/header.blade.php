@@ -11,11 +11,16 @@
         <div class="">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a href="" class="nav-link">Hi, Cashier 1</a>
+                    <a href="" class="nav-link">Hi, {{session()->get('name')}}</a>
                 </li>
+                @if(session()->get('id') == 2)
+                    <li style="padding-top: 6px"><a href="{{url('/logout')}}"><i style="color: white; font-size: 32px;" class="fas fa-sign-out-alt logout-cashier"></i></a></li>
+                @endif
+                @if(session()->get('id') == 1)
                 <li class="nav-item nav-burger">
                     <i class="fas fa-bars"></i>
                 </li>
+                @endif
             </ul>
         </div>
     </div>
